@@ -4,7 +4,7 @@ Clone this repo so you have a local copy:
 
 ```bash
 cd ~/cs50-dev
-git clone git@github.com:cs50spring2019/examples.git
+git clone git@github.com:cs50dartmouth/examples.git
 ```
 
 To update, any time, `cd examples` and `git pull`.
