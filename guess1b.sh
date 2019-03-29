@@ -1,10 +1,14 @@
 #!/bin/bash
 #
-# guess2.sh
+# guess1.sh
 # 
 # Description: The user tries to guess a number between 1-100 
-# This time, we guide the user toward an answer.
-# It still needs some defensive checks on the input!
+# We change the expression to use [[ and -gt for arithmetical comparison.
+#
+# This is not a good program. There is no check on what the
+# user enters; it might be outside the range.
+# Heck - it might not even be a number and might be empty!
+# Some defensive programming would check the input.
 # 
 # Input: The user enters a guess
 #
@@ -17,13 +21,7 @@ answer=31
 read -p "Guess my number: " guess
 
 while [[ $guess -ne $answer ]]; do
-    # The -gt treats the comparison as numeric rather than alpha.
-    if [[ $guess -gt $answer ]]; then
-        echo too high!
-    else
-        echo too low!
-    fi
-
+    echo "Wrong! try again"
     read -p "Guess my number: " guess
 done
 

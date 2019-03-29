@@ -24,9 +24,9 @@ answer=31
 # ask them once
 askguess 1 100
 
-while [ $guess != $answer ]; do
-    # Use (( )) syntax to treat the comparison as numeric rather than alpha.
-    if (( $guess > $answer )); then
+while [[ $guess -ne $answer ]]; do
+    # The -gt treats the comparison as numeric rather than alpha.
+    if [[ $guess -gt $answer ]]; then
         echo too high!
     else
         echo too low!
