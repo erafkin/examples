@@ -1,6 +1,6 @@
 /* 
- * readline.c - a utility function to safely read one line of input
- * See readline.h for documentation.
+ * freadline.c - a utility function to safely read one line of input
+ * See freadline.h for documentation.
  *
  * David Kotz, April 2016, 2017, 2019
  */
@@ -8,17 +8,17 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
-#include "readline.h"
+#include "freadline.h"
 
-bool 
-readline(char *buf, const int len) 
+bool
+freadline(FILE *fp, char *buf, const int len) 
 {
   int pos = 0;		      // where in the buffer do we place next char?
 
-  // fill the buffer from stdin until buf is full, until EOF, or until newline
-  while ( !feof(stdin) && pos < len-1 ) {
+  // fill the buffer from fp until buf is full, until EOF, or until newline
+  while ( !feof(fp) && pos < len-1 ) {
     // read and store a character
-    char c = getchar();
+    char c = getc(fp);
     if (c == '\n') {
       // end of line: terminate buf and return
       buf[pos++] = '\0';
@@ -34,7 +34,7 @@ readline(char *buf, const int len)
   // error: file ended or buffer filled before newline discovered.
 
   // strip characters until end of file or newline is finally reached
-  while ( !feof(stdin) && getchar() != '\n' ) {
+  while ( !feof(fp) && getc(fp) != '\n' ) {
     ; // discard the rest of characters on input line
   }
 
