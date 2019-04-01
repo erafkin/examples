@@ -17,6 +17,7 @@
 
 #include  <stdio.h>
 #include <string.h> /* required for the string function library */
+extern char *gets(char *str);
 
 #define MAXELS 50
 
