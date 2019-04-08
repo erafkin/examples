@@ -12,7 +12,7 @@ void stringcopy(char *sp, char *dp);
 int main()
 {
   char *src = "Computer Science 50";
-  char *dest; 
+  char *dest = "abc"; 
 
   // copy src to dest and print them out
   stringcopy(src, dest);
