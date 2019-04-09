@@ -28,7 +28,7 @@ struct listnode *listnode_new(char *name);
 int main()
 {
   struct listnode head = {NULL, NULL}; // dummy node at head of empty list
-  int n = 0;			       // number of names read
+  int n = 0;             // number of names read
 
   // read the list of names - any number of names!
   while (!feof(stdin)) {

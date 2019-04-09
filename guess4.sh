@@ -18,8 +18,8 @@ function askguess() {
     # Validate their input; it must not be empty, or contain a non-digit.
     # Note we quote $guess because it might be empty or multi-word.
     if [[ "$guess" == "" || "$guess" =~ [^0-9] ]]; then
-	echo bad number...
-	guess=0
+        echo bad number...
+        guess=0
     fi
     # at this point, $guess is guaranteed to be a number.
 }

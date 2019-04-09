@@ -102,10 +102,10 @@ askGuess(const int low, const int high)
   // use readline() to read a whole line, or as much as fits into our buffer
   // if it returns false, the line was too long, or an EOF occurred. 
   if (!readline(inputline, bufsize)) {
-    if (feof(stdin)) {		// end of file
+    if (feof(stdin)) {    // end of file
       printf("EOF\n");
       return 0;
-    } else {			// error in input
+    } else {      // error in input
       return -1;
     }
   }

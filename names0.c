@@ -23,7 +23,7 @@ main()
   const int maxNames = 100;  // maximum number of names
   const int maxLength = 50;  // maximum length of a name (minus 2)
   char names[maxNames][maxLength];
-  int n = 0;		     // number of names read
+  int n = 0;         // number of names read
 
   // read the list of names
   for (n = 0; n < maxNames && !feof(stdin); ) {
@@ -60,7 +60,7 @@ main()
 bool 
 readline(char *buf, const int len) 
 {
-  int pos = 0;		      // where in the buffer do we place next char?
+  int pos = 0;          // where in the buffer do we place next char?
 
   // fill the buffer from stdin until buf is full, until EOF, or until newline
   while ( !feof(stdin) && pos < len-1 ) {

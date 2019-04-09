@@ -22,7 +22,7 @@ int main()
 {
   const int maxNames = 100;  // maximum number of names
   char *names[maxNames];      // array of names, each a pointer to string
-  int n = 0;		      // number of names read
+  int n = 0;          // number of names read
 
   // read the list of names
   for (n = 0; n < maxNames && !feof(stdin); ) {

@@ -13,7 +13,7 @@
 bool
 freadline(FILE *fp, char *buf, const int len) 
 {
-  int pos = 0;		      // where in the buffer do we place next char?
+  int pos = 0;          // where in the buffer do we place next char?
 
   // fill the buffer from fp until buf is full, until EOF, or until newline
   while ( !feof(fp) && pos < len-1 ) {

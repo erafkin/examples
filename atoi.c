@@ -15,8 +15,8 @@ int main(const int argc, char *argv[])
   int status = 0;
 
   for (int i = 1; i < argc; i++) {
-    int number;		      // the number converted from argv[1]
-    char excess;	      // any excess chars after the number
+    int number;         // the number converted from argv[1]
+    char excess;        // any excess chars after the number
     
     // if the argument is valid, sscanf should extract exactly one thing.
     if (sscanf(argv[i], "%d%c", &number, &excess) == 1) {

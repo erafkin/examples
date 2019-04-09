@@ -35,28 +35,28 @@ int main() {
 
   switch (opselect) {
 
-    case 1:
-      printf("The sum of the numbers entered is %6.3f\n", fnum + snum);
-      break;
-    case 2:
-      printf("The product of the numbers entered is %6.3f\n", fnum * snum);
-      break;
+  case 1:
+    printf("The sum of the numbers entered is %6.3f\n", fnum + snum);
+    break;
+  case 2:
+    printf("The product of the numbers entered is %6.3f\n", fnum * snum);
+    break;
 
-    case 3:
-      if (snum != 0.0)
-        printf("The first number divided by the second is %6.3f\n",fnum / snum);
-      else
-		      printf("Division by zero is not allowed\n");
-      break; 
+  case 3:
+    if (snum != 0.0)
+      printf("The first number divided by the second is %6.3f\n",fnum / snum);
+    else
+      printf("Division by zero is not allowed\n");
+    break; 
 
-    case 4:
-      printf("The modulus of the numbers entered is %d\n", (int)fnum % (int)snum);
-      break;
+  case 4:
+    printf("The modulus of the numbers entered is %d\n", (int)fnum % (int)snum);
+    break;
 
-    default:
-      printf("Need to enter a number between 1-4\n\n"); 
+  default:
+    printf("Need to enter a number between 1-4\n\n"); 
 
- }
+  }
 
- return 0;
+  return 0;
 }

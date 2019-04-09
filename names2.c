@@ -21,8 +21,8 @@ main(const int argc, const char *argv[])
   const int maxNames = 100;  // maximum number of names
   const int maxLength = 50;  // maximum length of a name (minus 2)
   char names[maxNames][maxLength];
-  FILE *fp;		      // input file
-  int n = 0;		      // number of names read
+  FILE *fp;         // input file
+  int n = 0;          // number of names read
 
   // validate arguments and open input file
   if (argc == 1) {

@@ -24,7 +24,7 @@ int main()
 void testauto()
 {
   int num = 0; /* create the auto variable num */
-	       /* and initialize it to zero */
+  /* and initialize it to zero */
   printf("The value of the automatic variable num is %d\n", num);
   num++;
 }

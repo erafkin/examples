@@ -16,18 +16,18 @@
 int
 main()
 {
-  const int numSlots = 10;	// number of slots in array
-  int sorted[numSlots];		// the array of items
+  const int numSlots = 10;  // number of slots in array
+  int sorted[numSlots];   // the array of items
   
   /* fill the array with numbers */
   for (int n = 0; n < numSlots; n++) {
-    int item;			// a new item
-    scanf("%d", &item);		// read a new item
+    int item;     // a new item
+    scanf("%d", &item);   // read a new item
     for (int i = n; i > 0; i--) {
       if (sorted[i] > item) {
 	sorted[i+1] = sorted[i]; // bump it up to make room
       } else {
-	sorted[i] = item;	// drop the new item here
+	sorted[i] = item; // drop the new item here
       }
     }
   }

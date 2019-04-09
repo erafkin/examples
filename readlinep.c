@@ -23,7 +23,7 @@ char *freadlinep(FILE *fp)
   int len = 81;
   char *buf = calloc(len, sizeof(char));
   if (buf == NULL) {
-    return NULL;	      // out of memory
+    return NULL;        // out of memory
   }
 
   // Read characters from file until newline or EOF, 
@@ -37,8 +37,8 @@ char *freadlinep(FILE *fp)
     if (pos+1 > len-1) {
       char *newbuf = realloc(buf, ++len);
       if (newbuf == NULL) {
-      	free(buf);
-      	return NULL;	      // out of memory
+        free(buf);
+        return NULL;        // out of memory
       } else {
 	buf = newbuf;
       }

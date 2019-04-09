@@ -39,7 +39,7 @@ main (const int argc, const char *argv[])
   const char *progName = argv[0];   // name of this program
   const char *templateFilename;     // template file name
   const char *outputFilename;       // output file name
-  FILE *in, *out;		    // input and output files
+  FILE *in, *out;       // input and output files
 
   // parse arguments
   if (argc != 3) {
