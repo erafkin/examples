@@ -108,15 +108,19 @@ bag_new(void)
  */
 bool bag_insert(bag_t *bag, void *item) 
 {
-  bagnode_t *node = bagnode_new(item);
-
-  if (bag == NULL || node == NULL) {
+  if (bag == NULL) {
     return false;
-  } else {
-    // insert the new node at head of the list
-    node->next = bag->head;
-    bag->head = node;
   }
+
+  bagnode_t *node = bagnode_new(item);
+  if (node == NULL) {
+    return false;
+  }
+
+  // insert the new node at head of the list
+  node->next = bag->head;
+  bag->head = node;
+
   return true;
 }
 
@@ -140,11 +144,11 @@ bagnode_t *bagnode_new(void *item)
   
   if (node == NULL) {
     return NULL;
-  } else {
-    // initialize node contents
-    node->next = NULL;
-    node->item = item;
   }
+
+  // initialize node contents
+  node->next = NULL;
+  node->item = item;
 
   return node;
 }
