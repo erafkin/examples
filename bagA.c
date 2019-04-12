@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "bag.h"
+#include "bagA.h"
 
 /* the items in a bag */
 typedef struct bagnode {

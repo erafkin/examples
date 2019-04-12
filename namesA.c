@@ -13,10 +13,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-#include "file.h"
-#include "bag.h"
+#include "readlinep.h"
+#include "bagA.h"
 
-void printname(FILE *fp, void* item);
+void printname(void* item);
 
 /* ********************************************************* */
 int main()
@@ -30,7 +30,7 @@ int main()
 
   // read the list of names - any number of names!
   while (!feof(stdin)) {
-    name = readlinep(stdin);
+    name = readlinep();
     if (name != NULL) {
       bag_insert(bag, name);
       n++;
@@ -39,18 +39,15 @@ int main()
   
   // print the list of names
   printf("%d names:\n", n);
-  bag_print(bag, stdout, printname);
+  bag_print(bag, printname);
   putchar('\n');
-
-  // delete the bag and call free(item) for each item
-  bag_delete(bag, free);
 
   return 0;
 }
 
 /* printname, for use with bag_print */
-void printname(FILE *fp, void* item)
+void printname(void* item)
 {
   char *name=item;
-  fprintf(fp, "%s", name);
+  printf("%s", name);
 }
