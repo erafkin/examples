@@ -17,8 +17,8 @@ $(PROG): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) $(LIBS) -o $(PROG)
 
 # object files depend on include files
-names.o: bagA.h readlinep.h
-bag.o: bagA.h
+namesA.o: bagA.h readlinep.h
+bagA.o: bagA.h
 readlinep.o: readlinep.h
 
 clean:
