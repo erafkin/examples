@@ -9,7 +9,7 @@ LIBS =
 # uncomment the following to turn on verbose memory logging
 #TESTING=-DMEMTEST
 
-CFLAGS = -Wall -pedantic -std=c11 -ggdb $(TESTING) -I../lib
+CFLAGS = -Wall -pedantic -std=c11 -ggdb $(TESTING)
 CC = gcc
 MAKE = make
 
