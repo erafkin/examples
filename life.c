@@ -105,8 +105,8 @@ initialize_curses()
   initscr();
 
   // cache the size of the window in our global variables
-  NROWS = LINES;
-  NCOLS = COLS;
+  // (this is a macro, which is why we don't need & before the variables.)
+  getmaxyx(stdscr, NROWS, NCOLS);
 
   cbreak(); // actually, this is the default
   noecho(); // don't show the characters users type
